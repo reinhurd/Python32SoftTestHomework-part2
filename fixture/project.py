@@ -14,11 +14,8 @@ class ProjectHelper:
     def create(self, group):
         wd = self.app.wd
         self.open_project_page()
-        # init group creation
         wd.find_element_by_css_selector('input[value="Create New Project"]').click()
-        # fill group form
         self.enter_text(group)
-        # submit group creation
         wd.find_element_by_css_selector('input[value="Add Project"]').click()
         #self.return_to_groups_page()
 
@@ -55,7 +52,7 @@ class ProjectHelper:
 
     def enter_to_project_page_by_id(self, id):
         wd = self.app.wd
-        wd.get(self.app.baseurl+'manage_proj_edit_page.php?project_id='+id)
+        wd.get(self.app.baseurl+'manage_proj_edit_page.php?project_id='+str(id))
 
 
     ## Old code from adressbook tests
