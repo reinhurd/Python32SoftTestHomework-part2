@@ -16,4 +16,4 @@ pytest==3.9.2
 pytest-ordering==0.6
 selenium==3.14.1
 six==1.11.0
-urllib3==1.24
+urllib3==1.26.5
